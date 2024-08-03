@@ -1,0 +1,28 @@
+CM 3el Yagi 70cm JDriven 
+CM 27-Jul-2024 19:56:49
+CM DL1JHR
+CM 
+CM 3 element Yagi driven by a J-dipole optimised for 70cm SSB
+CM 3 Element Yagi gespeist von einem J-Dipol optimiert für 70cm SSB
+CM 
+CE
+SY lDipol=0.311
+SY space=0.020
+SY lRefl=0.333
+SY xRefl=0.173
+SY lDir01=0.314
+SY xDir01=0.103
+GW	1	9	0	0	0	0	lDipol/2	0	0.002
+GW	2	9	0	0	0	0	-lDipol/2	0	0.002
+GW	3	9	0	0	-space	0	-lDipol/2	-space	0.002
+GW	4	3	0	0	0	0	0	-space	0.002
+GW	5	3	0	-lDipol/2	0	0	-lDipol/2	-space	0.002
+GW	6	19	-xRefl	-lRefl/2	0	-xRefl	lRefl/2	0	0.002
+GW	7	18	xDir01	-lDir01/2	0	xDir01	lDir01/2	0	0.002
+GE	0
+GN	-1
+EK
+EX	0	4	2	1	1.414214	0	0	0
+FR	0	0	0	0	432.2	0
+RP	0	181	1	1000	0.	0.	1.	0.	0.	
+EN
