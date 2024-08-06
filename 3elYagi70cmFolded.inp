@@ -1,0 +1,27 @@
+CM 3el Yagi 70cm folded 
+CM 28-Jul-2024 12:37:58
+CM DL1JHR
+CM 
+CM 3 element Yagi optimised for 70cm SSB fed by a folded dipole
+CM 3 Element Yagi optimiert für 70cm gespeist durch einen Faltdipol
+CM 
+CE
+SY lDipol=0.300
+SY space=0.020
+SY lRefl=0.330
+SY xRefl=0.192
+SY lDir01=0.314
+SY xDir01=0.106
+GW	1	19	0	-lDipol/2	0	0	lDipol/2	0	0.002
+GW	2	19	0	-lDipol/2	-space	0	lDipol/2	-space	0.002
+GW	3	3	0	lDipol/2	0	0	lDipol/2	-space	0.002
+GW	4	3	0	-lDipol/2	0	0	-lDipol/2	-space	0.002
+GW	5	19	-xRefl	-lRefl/2	0	-xRefl	lRefl/2	0	0.002
+GW	6	18	xDir01	-lDir01/2	0	xDir01	lDir01/2	0	0.002
+GE	0
+GN	-1
+EK
+EX	0	1	10	1	1.414214	0	0	0
+FR	0	0	0	0	432.2	0
+RP	0	181	1	1000	0.	0.	1.	0.	0.	
+EN
