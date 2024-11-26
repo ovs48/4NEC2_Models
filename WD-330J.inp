@@ -1,0 +1,22 @@
+CM WD-330J
+CM 25-Nov-2024 22:20:59
+CM DL1JHR
+CE
+SY lSchenkel1=12.500	'Länge eines Dipolschenkels
+SY hSchenkel1=10	'Höhe über Grund
+SY Breite=0.500	'Breite des Dipols
+SY res=1080	'Abschlusswiderstand
+GW	1	51	0	-lSchenkel1	hSchenkel1	0	lSchenkel1	hSchenkel1	0.001
+GW	2	2	0	lSchenkel1	hSchenkel1	Breite	lSchenkel1	hSchenkel1	0.001
+GW	3	2	0	-lSchenkel1	hSchenkel1	Breite	-lSchenkel1	hSchenkel1	0.001
+GW	4	51	Breite	-lSchenkel1	hSchenkel1	Breite	lSchenkel1	hSchenkel1	0.001
+GW	5	1	-Breite	-0.1	hSchenkel1	-Breite	0.1	hSchenkel1	0.001
+GE	1
+LD	1	4	26	26	res	'Abschlusswiderstand
+GN	2	0	0	0	13	0.002
+EK
+EX	0	5	1	1	1.414214	0	0
+NT	5	1	1	26	160	0	-40	0	10	0	'1:16-BalUn
+FR	0	0	0	0	3.65	0
+RP	0	181	1	1000	0.	0.	1.	0.	0.	
+EN
