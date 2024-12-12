@@ -1,0 +1,29 @@
+CM Offset Dipol 80m/60m Hühnerleiter
+CM 24-Nov-2024 14:19:44
+CM DL1JHR
+CE
+SY lSpeisung=1.200
+SY hSpeisung=10.000
+SY segSpeisung=3
+SY lSchenkel1=29.834
+SY hSchenkel1=hSpeisung
+SY ySchenkel1=sqr(lSchenkel1*lSchenkel1-(hSpeisung-hSchenkel1)*(hSpeisung-hSchenkel1))	'Drahtlänge ändert sich bei Inverted-V nicht
+SY lSchenkel2=4.781
+SY hSchenkel2=hSpeisung
+SY ySchenkel2=sqr(lSchenkel2*lSchenkel2-(hSpeisung-hSchenkel2)*(hSpeisung-hSchenkel2))	'Drahtlänge ändert sich bei Inverted-V nicht
+SY lHuhn=11.552
+SY ZHuhn=633
+SY lQuelle=lSpeisung/3
+SY hQuelle=hSpeisung
+GW	1	3	0	-lSpeisung/2	hSpeisung	0	lSpeisung/2	hSpeisung	0.001
+GW	2	19	0	-lSpeisung/2	hSpeisung	0	-ySchenkel1	hSchenkel1	0.001
+GW	3	3	0	lSpeisung/2	hSpeisung	0	ySchenkel2	hSchenkel2	0.001
+GW	4	1	-lHuhn	-lQuelle/2	hQuelle	-lHuhn	lQuelle/2	hQuelle	0.001
+GE	1
+GN	2	0	0	0	13	0.002
+EK
+EX	0	4	1	1	1.414214	0	0
+TL	1	2	4	1	zHuhn	0	0	0	0	0
+FR	0	0	0	0	3.6	0
+RP	0	181	1	1000	0.	0.	1.	0.	0.	
+EN
